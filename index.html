@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO y Metadatos -->
+    <title>NEXO LAB AI | Ingeniería Avanzada para la Automatización</title>
+    <meta name="description" content="Ingeniería avanzada para la automatización de procesos críticos en Nicaragua. Soluciones de IA, Chatbots, y optimización de flujos con Make/n8n.">
+    <meta property="og:title" content="NEXO LAB AI | Ingeniería Avanzada">
+    <meta property="og:description" content="Automatización de procesos críticos y estrategias de IA para PyMEs en Nicaragua.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/0d0d0d/FCD34D?text=NEXO+LAB+AI"> <!-- Placeholder para imagen social -->
+
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Tailwind para colores personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nexo-black': '#0d0d0d',
+                        'nexo-dark': '#1a1a1a',
+                        'nexo-yellow': '#FCD34D',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+        body {
+            background-color: #0d0d0d;
+            color: white;
+        }
+
+        .hero-title {
+            line-height: 1.1;
+            font-weight: 900;
+        }
+
+        .hero-container {
+            position: relative;
+            overflow: hidden;
+            min-height: 85vh; /* Ligeramente más alto para impacto */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        /* Animación refinada del Rayo */
+        @keyframes lightning-glow {
+            0% { opacity: 0.15; filter: drop-shadow(0 0 10px rgba(252, 211, 77, 0.3)); }
+            50% { opacity: 0.3; filter: drop-shadow(0 0 20px rgba(252, 211, 77, 0.6)); }
+            100% { opacity: 0.15; filter: drop-shadow(0 0 10px rgba(252, 211, 77, 0.3)); }
+        }
+
+        .lightning-svg {
+            position: absolute;
+            top: 50%;
+            left: 50%; /* Centrado perfecto */
+            transform: translate(-50%, -50%) rotate(15deg);
+            width: 95%; 
+            max-width: 650px;
+            height: auto;
+            pointer-events: none;
+            z-index: 1; 
+            animation: lightning-glow 5s infinite ease-in-out; /* Animación más lenta y elegante */
+        }
+
+        .content-overlay {
+            position: relative;
+            z-index: 10; 
+        }
+
+        /* Efecto Glassmorphism para tarjetas */
+        .card-glass {
+            background: linear-gradient(145deg, #1a1a1a 0%, #111111 100%);
+            border: 1px solid rgba(252, 211, 77, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-glass:hover {
+            border-color: rgba(252, 211, 77, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(252, 211, 77, 0.15);
+        }
+
+        /* Botón CTA con brillo */
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(252, 211, 77, 0.4);
+            transform: scale(1.02);
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. Cabecera (Sticky con Backdrop Blur mejorado) -->
+    <header class="sticky top-0 z-50 bg-nexo-black/80 backdrop-blur-md border-b border-nexo-yellow/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20"> <!-- Altura aumentada ligeramente -->
+                
+                <!-- Logo NEXO LAB AI -->
+                <a href="#" class="flex items-center space-x-2 group">
+                    <svg class="w-8 h-8 text-nexo-yellow transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 2L2 14h9l-1 8 9-12h-9l1-8z"/>
+                    </svg>
+                    <span class="text-xl font-extrabold tracking-widest text-white">NEXO LAB AI</span>
+                </a>
+
+                <!-- Navegación de Escritorio -->
+                <nav class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                    <a href="#servicios" class="text-gray-400 hover:text-nexo-yellow transition duration-300">Servicios</a>
+                    <a href="#socios" class="text-gray-400 hover:text-nexo-yellow transition duration-300">Los Socios</a>
+                    <a href="#casos" class="text-gray-400 hover:text-nexo-yellow transition duration-300">Casos de Éxito</a>
+                    <a href="#blog" class="text-gray-400 hover:text-nexo-yellow transition duration-300">Blog</a>
+                    <a href="#politica" class="text-gray-400 hover:text-nexo-yellow transition duration-300">Seguridad</a>
+                    <!-- Botón CTA Header -->
+                    <a href="https://wa.me/50584250959?text=Hola%20NEXO%20LAB%20AI,%20visité%20su%20web%20y%20me%20interesa%20una%20consultoría." 
+                       class="px-5 py-2.5 bg-nexo-yellow text-black font-bold rounded-lg shadow-lg hover:bg-yellow-300 transition duration-300 btn-glow">
+                        Consultoría Instantánea
+                    </a>
+                </nav>
+
+                <!-- Botón Menú móvil -->
+                <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-nexo-yellow focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <!-- Menú Desplegable Móvil -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 space-y-2 bg-nexo-dark/95 backdrop-blur-xl absolute top-20 left-0 w-full border-b border-gray-800 shadow-2xl">
+                <a href="#servicios" class="block px-6 py-3 text-gray-300 hover:text-nexo-yellow hover:bg-white/5 transition duration-300">Servicios</a>
+                <a href="#socios" class="block px-6 py-3 text-gray-300 hover:text-nexo-yellow hover:bg-white/5 transition duration-300">Los Socios</a>
+                <a href="#casos" class="block px-6 py-3 text-gray-300 hover:text-nexo-yellow hover:bg-white/5 transition duration-300">Casos de Éxito</a>
+                <a href="#blog" class="block px-6 py-3 text-gray-300 hover:text-nexo-yellow hover:bg-white/5 transition duration-300">Blog</a>
+                <a href="#politica" class="block px-6 py-3 text-gray-300 hover:text-nexo-yellow hover:bg-white/5 transition duration-300">Seguridad</a>
+                <a href="#contacto" class="block px-6 py-3 text-gray-300 hover:text-nexo-yellow hover:bg-white/5 transition duration-300">Contacto</a>
+                <div class="px-6 pt-4 pb-2">
+                    <a href="https://wa.me/50584250959?text=Hola%20NEXO%20LAB%20AI,%20visité%20su%20web%20y%20me%20interesa%20una%20consultoría." 
+                       class="block w-full text-center px-4 py-3 bg-nexo-yellow text-black font-bold rounded-lg shadow-lg hover:bg-yellow-300 transition duration-300">
+                        Consultoría Instantánea
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Sección Principal (Héroe) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hero-container">
+
+        <svg class="lightning-svg" viewBox="0 0 300 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M120 0L0 200H100L80 500L300 200H200L220 0H120Z" fill="#FCD34D"/>
+        </svg>
+
+        <div class="content-overlay max-w-4xl mx-auto">
+            
+            <h1 class="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl mt-10 tracking-tight text-white mb-6">
+                <span class="text-nexo-yellow block text-3xl sm:text-5xl mb-2 font-bold">NEXO LAB AI:</span>
+                Ingeniería Avanzada para la <br class="hidden md:block">
+                <span class="text-white font-extrabold">Automatización</span>
+                 de Procesos Críticos.
+            </h1>
+
+            <p class="text-lg md:text-xl text-gray-400 mt-6 mb-10 font-medium italic max-w-2xl mx-auto">
+                "Datos en Productividad. El futuro, diseñado hoy."
+            </p>
+
+            <!-- CTA Principal -->
+            <a href="https://wa.me/50584250959?text=Hola%20NEXO%20LAB%20AI,%20visité%20su%20web%20y%20me%20interesa%20agendar%20una%20sesión." 
+               class="btn-glow inline-block px-8 py-4 md:px-12 md:py-5 mt-4 text-lg font-bold bg-nexo-yellow text-black rounded-xl shadow-2xl hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-50">
+                AGENDA UNA SESIÓN DE CONSULTORÍA
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Separador Sutil -->
+    <div class="w-full border-t border-nexo-yellow/20 my-8 md:my-16 max-w-6xl mx-auto"></div>
+
+    <!-- 3. Sección de Propuesta de Valor -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white tracking-tight">
+            Nuestra Promesa: <span class="text-nexo-yellow">Autoridad, Precisión, Resultados</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+            <!-- Característica 1 -->
+            <div class="card-glass p-8 rounded-2xl">
+                <div class="text-nexo-yellow mb-5">
+                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M11 2L2 14h9l-1 8 9-12h-9l1-8z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Flujos Unificados</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Consolidamos sus datos dispersos en una visión 360, eliminando silos operativos para una toma de decisión precisa.
+                </p>
+            </div>
+
+            <!-- Característica 2 -->
+            <div class="card-glass p-8 rounded-2xl">
+                <div class="text-nexo-yellow mb-5">
+                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Costos Optimizados</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Implementamos IA para reducir gastos operativos y maximizar la eficiencia de sus recursos, garantizando la precisión.
+                </p>
+            </div>
+
+            <!-- Característica 3 -->
+            <div class="card-glass p-8 rounded-2xl">
+                <div class="text-nexo-yellow mb-5">
+                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.38-1.09-.67-1.72-.83L14 2h-4L9.47 4.9c-.63.16-1.2.45-1.72.83l-2.49-1c-.22-.08-.49 0-.61.22l2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.38 1.09.67 1.72.83L10 22h4l.53-2.83c.63-.16 1.2-.45 1.72-.83l2.49 1c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Experiencia a Escala</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Desplegamos agentes conversacionales que gestionan y encantan a miles de clientes simultáneamente, 24/7.
+                </p>
+            </div>
+
+            <!-- Característica 4 -->
+            <div class="card-glass p-8 rounded-2xl">
+                <div class="text-nexo-yellow mb-5">
+                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11V3h-2v8h-4V3H8v8H4v10h16V11h-4z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Decisión Predictiva</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Movemos su empresa de la adivinanza al pronóstico, anticipando tendencias de crecimiento y riesgos del mercado.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Tecnologías que Dominamos -->
+    <section class="py-16 bg-nexo-dark border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-xl font-semibold text-center text-gray-400 uppercase tracking-widest mb-10">
+                Tecnologías que Dominamos
+            </h3>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="https://placehold.co/100x40/333333/FFD700?text=Make" alt="Logo Make" class="h-8 md:h-10 hover:scale-110 transition-transform" loading="lazy">
+                <img src="https://placehold.co/100x40/333333/FFD700?text=n8n" alt="Logo n8n" class="h-8 md:h-10 hover:scale-110 transition-transform" loading="lazy">
+                <img src="https://placehold.co/140x40/333333/FFD700?text=Google+Cloud" alt="Logo Google Cloud AI" class="h-8 md:h-10 hover:scale-110 transition-transform" loading="lazy">
+                <img src="https://placehold.co/100x40/333333/FFD700?text=AWS" alt="Logo AWS" class="h-8 md:h-10 hover:scale-110 transition-transform" loading="lazy">
+                <img src="https://placehold.co/100x40/333333/FFD700?text=Python" alt="Logo Python" class="h-8 md:h-10 hidden sm:block hover:scale-110 transition-transform" loading="lazy">
+                <img src="https://placehold.co/100x40/333333/FFD700?text=Node.js" alt="Logo Node.js" class="h-8 md:h-10 hidden sm:block hover:scale-110 transition-transform" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Roadmap de Soluciones -->
+    <section id="servicios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <h2 class="text-3xl md:text-5xl font-bold text-center mb-20 text-white">
+            Nuestro Roadmap de <span class="text-nexo-yellow">Soluciones de IA</span>
+        </h2>
+        
+        <div class="space-y-12">
+            
+            <!-- Servicio 1 -->
+            <div class="flex flex-col lg:flex-row card-glass rounded-2xl p-8 md:p-12">
+                <div class="lg:w-2/3 lg:pr-12">
+                    <h3 class="text-3xl font-bold mb-4 text-white">Consultoría Estratégica de IA</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+                        Definimos el plan de acción concreto, cuantificable y alineado con los objetivos de negocio. No ofrecemos teoría, sino una hoja de ruta con resultados esperados.
+                    </p>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">▸</span> <strong>Madurez de IA:</strong> Evaluación profunda de infraestructura y diseño de roadmap.</li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">▸</span> <strong>Estrategia GenAI:</strong> Identificación de casos prioritarios para reducción de costos.</li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">▸</span> <strong>Beneficio:</strong> Ventaja competitiva sostenible y medible.</li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/3 mt-8 lg:mt-0 lg:border-l lg:border-gray-700 lg:pl-12 flex flex-col justify-center">
+                    <p class="text-xl font-semibold text-nexo-yellow mb-6 text-center lg:text-left">Su Socio Estratégico</p>
+                    <a href="https://wa.me/50584250959?text=Hola,%20me%20interesa%20agendar%20una%20Sesión%20de%20Planificación%20Estratégica." 
+                       class="btn-glow w-full py-4 bg-nexo-yellow text-black font-bold rounded-lg hover:bg-yellow-300 transition duration-300 text-center">
+                        Agenda una Sesión
+                    </a>
+                </div>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="flex flex-col lg:flex-row card-glass rounded-2xl p-8 md:p-12">
+                <div class="lg:w-2/3 lg:pr-12">
+                    <h3 class="text-3xl font-bold mb-4 text-white">Automatización y RPA</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+                        Ejecutamos la optimización operativa diseñando flujos de trabajo autónomos que eliminan la fricción manual y liberan a su equipo para tareas de alto valor.
+                    </p>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">▸</span> <strong>Diseño de Flujos:</strong> Procesos automáticos para back-office y producción.</li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">▸</span> <strong>Optimización de Costos:</strong> Minimización de errores humanos y tiempo.</li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">▸</span> <strong>Beneficio:</strong> Aumento de eficiencia operativa impactando el margen.</li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/3 mt-8 lg:mt-0 lg:border-l lg:border-gray-700 lg:pl-12 flex flex-col justify-center">
+                    <p class="text-xl font-semibold text-nexo-yellow mb-6 text-center lg:text-left">Caso de Uso Destacado</p>
+                    <a href="https://wa.me/50584250959?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20el%20Caso%20de%20Estudio%20RPA." 
+                       class="btn-glow w-full py-4 bg-nexo-yellow text-black font-bold rounded-lg hover:bg-yellow-300 transition duration-300 text-center">
+                        Ver Caso de Estudio RPA
+                    </a>
+                </div>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="flex flex-col lg:flex-row card-glass rounded-2xl p-8 md:p-12">
+                <div class="lg:w-2/3 lg:pr-12">
+                    <h3 class="text-3xl font-bold mb-4 text-white">Desarrollo de Software LLM</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+                        Implementamos Large Language Models (LLMs) y agentes inteligentes diseñados específicamente para tareas complejas B2B, como gestión documental y detección de fraude.
+                    </p>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">▸</span> <strong>Agentes Conversacionales:</strong> Soporte avanzado y onboarding automatizado.</li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">▸</span> <strong>Detección de Riesgo:</strong> Identificación de patrones anómalos en transacciones.</li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">▸</span> <strong>Beneficio:</strong> Precisión legal y financiera en tiempo real.</li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/3 mt-8 lg:mt-0 lg:border-l lg:border-gray-700 lg:pl-12 flex flex-col justify-center">
+                    <p class="text-xl font-semibold text-nexo-yellow mb-6 text-center lg:text-left">Consultoría Personalizada</p>
+                    <a href="https://wa.me/50584250959?text=Hola,%20me%20interesa%20una%20Solución%20Personalizada%20de%20LLM." 
+                       class="btn-glow w-full py-4 bg-nexo-yellow text-black font-bold rounded-lg hover:bg-yellow-300 transition duration-300 text-center">
+                        Solución Personalizada
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. Sus Socios Estratégicos (P2P) -->
+    <section id="socios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="card-glass rounded-2xl p-8 md:p-16">
+            
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-nexo-yellow">Sus Socios Estratégicos (P2P)</h2>
+
+            <!-- Perfiles -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 mb-12">
+                
+                <!-- Ariel -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="relative mb-6">
+                        <div class="absolute inset-0 bg-nexo-yellow blur-lg opacity-20 group-hover:opacity-40 transition duration-500 rounded-full"></div>
+                        <img src="https://placehold.co/400x400/333333/FFD700?text=Foto+Ariel" alt="Ing. Ariel Alvarez" class="relative rounded-full w-48 h-48 object-cover border-2 border-nexo-yellow/30" loading="lazy">
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-1">Ing. Ariel Alvarez Meléndez</h3>
+                    <p class="text-nexo-yellow font-medium mb-4">Especialista en Infraestructura y Cloud</p>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Arquitecto de infraestructura robusta (Concentrix, CCNA). Garantiza que nuestras soluciones operen con máxima eficiencia y seguridad en la nube.
+                    </p>
+                </div>
+
+                <!-- Aquiles -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="relative mb-6">
+                        <div class="absolute inset-0 bg-nexo-yellow blur-lg opacity-20 group-hover:opacity-40 transition duration-500 rounded-full"></div>
+                        <img src="https://placehold.co/400x400/333333/FFD700?text=Foto+Aquiles" alt="Ing. Aquiles Dávila" class="relative rounded-full w-48 h-48 object-cover border-2 border-nexo-yellow/30" loading="lazy">
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-1">Ing. Aquiles Dávila Cáceres</h3>
+                    <p class="text-nexo-yellow font-medium mb-4">Estratega IA y Arquitecto de Flujos</p>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Especialista en integración de sistemas (Xerox, CompTIA). Diseña el nexo entre procesos empresariales y el potencial de la IA.
+                    </p>
+                </div>
+                
+            </div>
+
+            <!-- Manifiesto -->
+            <div class="max-w-3xl mx-auto text-center bg-black/20 rounded-xl p-8 border border-white/5">
+                <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+                    En NEXO LAB AI, no tercerizamos su estrategia. Usted trata directamente con los ingenieros fundadores. No vendemos "nubes", vendemos <strong class="text-white">utilidad concreta</strong>.
+                </p>
+                
+                <div class="text-left inline-block">
+                    <h4 class="text-white font-bold mb-3 text-center md:text-left">Nuestro Manifiesto:</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><span class="text-nexo-yellow mr-2">✓</span> Claridad Radical: Qué se puede y qué no.</li>
+                        <li class="flex items-center"><span class="text-nexo-yellow mr-2">✓</span> Resultados Medibles: Ahorro o ingresos.</li>
+                        <li class="flex items-center"><span class="text-nexo-yellow mr-2">✓</span> Relación a Largo Plazo: Su crecimiento es nuestro éxito.</li>
+                    </ul>
+                </div>
+
+                <div class="mt-10">
+                    <a href="https://wa.me/50584250959?text=Hola,%20visité%20la%20web%20y%20me%20gustaría%20hablar%20directamente%20con%20los%20ingenieros." 
+                       class="btn-glow inline-block px-10 py-3 bg-nexo-yellow text-black font-bold rounded-lg hover:bg-yellow-300 transition duration-300">
+                        Hablemos de su Proyecto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Casos de Éxito -->
+    <section id="casos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">Resultados Reales en <span class="text-nexo-yellow">Nicaragua</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Caso 1 -->
+            <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
+                <div class="flex items-center justify-between mb-4">
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-wider">Distribuidora PyME</p>
+                    <span class="bg-nexo-yellow/10 text-nexo-yellow text-xs px-2 py-1 rounded">n8n / Make</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white">De WhatsApp a Inventario en Cero Clics</h3>
+                <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
+                    <strong>Problema:</strong> Gestión manual de pedidos, errores de transcripción y retrasos.
+                    <br><strong>Solución:</strong> Flujo automático que lee pedidos, extrae ítems con IA y genera pre-facturas.
+                </p>
+                <div class="bg-black/40 p-5 rounded-xl border border-white/5">
+                    <p class="font-bold text-white mb-2 text-sm">Resultados:</p>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li>• <strong>+40%</strong> velocidad procesamiento.</li>
+                        <li>• <strong>-95%</strong> errores transcripción.</li>
+                        <li>• Ahorro <strong>25hrs</strong>/semana.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Caso 2 -->
+            <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
+                <div class="flex items-center justify-between mb-4">
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-wider">Agroindustria</p>
+                    <span class="bg-nexo-yellow/10 text-nexo-yellow text-xs px-2 py-1 rounded">Computer Vision</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white">Detección Temprana de Plagas (Roya)</h3>
+                <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
+                    <strong>Problema:</strong> Detección tardía visual causando pérdida de cosecha.
+                    <br><strong>Solución:</strong> App web con Visión por Computadora para análisis de hojas en campo.
+                </p>
+                <div class="bg-black/40 p-5 rounded-xl border border-white/5">
+                    <p class="font-bold text-white mb-2 text-sm">Resultados:</p>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li>• Detección <strong>2 semanas antes</strong>.</li>
+                        <li>• <strong>-30%</strong> pérdida cosecha.</li>
+                        <li>• <strong>20%</strong> optimización fungicidas.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Caso 3 -->
+            <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
+                <div class="flex items-center justify-between mb-4">
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-wider">Turismo (Hotel)</p>
+                    <span class="bg-nexo-yellow/10 text-nexo-yellow text-xs px-2 py-1 rounded">Chatbot IA</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white">Asistente Virtual 24/7</h3>
+                <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
+                    <strong>Problema:</strong> Pérdida de reservas por consultas fuera de horario.
+                    <br><strong>Solución:</strong> Chatbot entrenado con FAQ y disponibilidad en tiempo real.
+                </p>
+                <div class="bg-black/40 p-5 rounded-xl border border-white/5">
+                    <p class="font-bold text-white mb-2 text-sm">Resultados:</p>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li>• <strong>+35%</strong> leads capturados.</li>
+                        <li>• Ahorro <strong>20hrs</strong>/semana recepción.</li>
+                        <li>• Respuesta inmediata <strong>24/7</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Caso 4 -->
+            <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
+                <div class="flex items-center justify-between mb-4">
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-wider">Retail Local</p>
+                    <span class="bg-nexo-yellow/10 text-nexo-yellow text-xs px-2 py-1 rounded">Marketing IA</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white">Micro-segmentación Inteligente</h3>
+                <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
+                    <strong>Problema:</strong> Pauta genérica con alto costo y baja conversión.
+                    <br><strong>Solución:</strong> Análisis de datos para 4 micro-segmentos y copy personalizado con GenAI.
+                </p>
+                <div class="bg-black/40 p-5 rounded-xl border border-white/5">
+                    <p class="font-bold text-white mb-2 text-sm">Resultados:</p>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li>• <strong>+200%</strong> ROAS.</li>
+                        <li>• <strong>+50%</strong> CTR.</li>
+                        <li>• Nicho de alto valor descubierto.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Blog (Liderazgo de Pensamiento) -->
+    <section id="blog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 class="text-3xl font-bold text-center mb-16 text-white">Liderazgo de Pensamiento</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Artículo 1 -->
+            <a href="mailto:nexo.lab.ai@gmail.com?subject=Consulta%20Estrategia%20GenAI" class="card-glass p-8 rounded-2xl hover:border-nexo-yellow/50 block group">
+                <p class="text-xs font-bold text-nexo-yellow uppercase mb-3">Estrategia</p>
+                <h3 class="text-xl font-bold mb-3 text-white group-hover:text-nexo-yellow transition-colors">El Error de la Hiperautomatización sin Roadmap</h3>
+                <p class="text-gray-400 text-sm">Por qué la ejecución sin estrategia clara destruye valor.</p>
+            </a>
+
+            <!-- Artículo 2 -->
+            <a href="mailto:nexo.lab.ai@gmail.com?subject=Consulta%20RAG%20vs%20Fine-Tuning" class="card-glass p-8 rounded-2xl hover:border-nexo-yellow/50 block group">
+                <p class="text-xs font-bold text-nexo-yellow uppercase mb-3">Técnico</p>
+                <h3 class="text-xl font-bold mb-3 text-white group-hover:text-nexo-yellow transition-colors">RAG vs. Fine-Tuning: Precisión en Chatbots</h3>
+                <p class="text-gray-400 text-sm">Metodologías para gestión documental precisa en empresas.</p>
+            </a>
+
+            <!-- Artículo 3 -->
+            <a href="mailto:nexo.lab.ai@gmail.com?subject=Consulta%20Costos%20Legacy" class="card-glass p-8 rounded-2xl hover:border-nexo-yellow/50 block group">
+                <p class="text-xs font-bold text-nexo-yellow uppercase mb-3">Tendencia</p>
+                <h3 class="text-xl font-bold mb-3 text-white group-hover:text-nexo-yellow transition-colors">Desmontando el Costo Operativo Legacy</h3>
+                <p class="text-gray-400 text-sm">La IA como catalizador de rentabilidad a largo plazo.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 9. Seguridad -->
+    <section id="politica" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-nexo-dark rounded-3xl border border-gray-800 my-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-nexo-yellow mb-4">Compromiso de Seguridad</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">Sus datos son su activo más crítico. Nuestro estándar es confidencialidad total.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left px-4">
+            <div>
+                <h3 class="text-lg font-bold text-white mb-3">1. Confidencialidad (NDA)</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Trato bajo estricta confidencialidad desde el primer contacto. NDA implícito en cada interacción.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-white mb-3">2. No-Reventa de Datos</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Jamás utilizamos sus datos para entrenar modelos públicos ni para terceros. Su inteligencia es suya.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-white mb-3">3. Propiedad Intelectual</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Todo desarrollo (Make, Software, Modelos) es 100% propiedad de su empresa al finalizar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-black border-t border-gray-900 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold text-white mb-6">Hablemos de su Estrategia.</h3>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
+                <a href="https://wa.me/50584250959" class="flex items-center text-gray-300 hover:text-nexo-yellow transition duration-300">
+                    <span class="mr-2">WhatsApp:</span> +505 8425-0959
+                </a>
+                <span class="hidden md:block text-gray-700">|</span>
+                <a href="mailto:nexo.lab.ai@gmail.com" class="flex items-center text-gray-300 hover:text-nexo-yellow transition duration-300">
+                    <span class="mr-2">Email:</span> nexo.lab.ai@gmail.com
+                </a>
+            </div>
+            <p class="text-xs text-gray-600">
+                &copy; 2025 NEXO LAB AI. Todos los derechos reservados. <br>Desarrollado con visión estratégica en Nicaragua.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
