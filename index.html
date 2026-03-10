@@ -357,7 +357,7 @@
                 <div class="flex flex-col items-center text-center group">
                     <div class="relative mb-6">
                         <div class="absolute inset-0 bg-nexo-yellow blur-lg opacity-20 group-hover:opacity-40 transition duration-500 rounded-full"></div>
-                        <img src="https://placehold.co/400x400/333333/FFD700?text=Foto+Ariel" alt="Ing. Ariel Alvarez" class="relative rounded-full w-48 h-48 object-cover border-2 border-nexo-yellow/30" loading="lazy">
+                        <img src="assets/images/team/ariel.jpg" alt="Ing. Ariel Alvarez" class="relative rounded-full w-48 h-48 object-cover object-center border-2 border-nexo-yellow/30" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-1">Ing. Ariel Alvarez Meléndez</h3>
                     <p class="text-nexo-yellow font-medium mb-4">Especialista en Infraestructura y Cloud</p>
@@ -370,7 +370,7 @@
                 <div class="flex flex-col items-center text-center group">
                     <div class="relative mb-6">
                         <div class="absolute inset-0 bg-nexo-yellow blur-lg opacity-20 group-hover:opacity-40 transition duration-500 rounded-full"></div>
-                        <img src="https://placehold.co/400x400/333333/FFD700?text=Foto+Aquiles" alt="Ing. Aquiles Dávila" class="relative rounded-full w-48 h-48 object-cover border-2 border-nexo-yellow/30" loading="lazy">
+                        <img src="assets/images/team/aquiles.jpg" alt="Ing. Aquiles Dávila" class="relative rounded-full w-48 h-48 object-cover object-center border-2 border-nexo-yellow/30" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-1">Ing. Aquiles Dávila Cáceres</h3>
                     <p class="text-nexo-yellow font-medium mb-4">Estratega IA y Arquitecto de Flujos</p>
@@ -410,88 +410,108 @@
     <section id="casos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">Resultados Reales en <span class="text-nexo-yellow">Nicaragua</span></h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             
-            <!-- Caso 1 -->
-            <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-wider">Distribuidora PyME</p>
-                    <span class="bg-nexo-yellow/10 text-nexo-yellow text-xs px-2 py-1 rounded">n8n / Make</span>
+            <!-- Caso 1: PBS Control Digital -->
+            <div class="card-glass p-8 md:p-10 rounded-2xl flex flex-col h-full relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-br from-nexo-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="flex items-center justify-between mb-6 relative z-10">
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-widest">Ingeniería & Preventa</p>
+                    <span class="bg-blue-900/40 text-blue-300 border border-blue-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">React 19 / Gemini AI</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">De WhatsApp a Inventario en Cero Clics</h3>
-                <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
-                    <strong>Problema:</strong> Gestión manual de pedidos, errores de transcripción y retrasos.
-                    <br><strong>Solución:</strong> Flujo automático que lee pedidos, extrae ítems con IA y genera pre-facturas.
+                
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-white leading-tight relative z-10">PBS Control Digital (Suite OCR)</h3>
+                
+                <p class="text-gray-400 mb-6 text-sm md:text-base leading-relaxed flex-grow relative z-10">
+                    <strong>Problema Central:</strong> Dependencia de transcripción humana para cotizaciones B2B, márgenes calculados empíricamente y latencia operativa.<br><br>
+                    <strong>Solución Arquitectónica:</strong> Auténtica Suite "Full Cycle" impulsada por <span class="text-nexo-yellow">Gemini Flash</span>. Escanea PDFs de proveedores (SINSA/SINTER) con OCR profundo, realiza *Fuzzy Matching* en milisegundos contra el catálogo corporativo (~400 ítems) para garantizar precios exactos, y exporta en formato estructurado Excel inyectando diseño corporativo ARGB.
                 </p>
-                <div class="bg-black/40 p-5 rounded-xl border border-white/5">
-                    <p class="font-bold text-white mb-2 text-sm">Resultados:</p>
-                    <ul class="space-y-1 text-sm text-gray-300">
-                        <li>• <strong>+40%</strong> velocidad procesamiento.</li>
-                        <li>• <strong>-95%</strong> errores transcripción.</li>
-                        <li>• Ahorro <strong>25hrs</strong>/semana.</li>
+                
+                <div class="bg-black/40 p-5 md:p-6 rounded-xl border border-white/5 relative z-10">
+                    <p class="font-extrabold text-white mb-3 text-sm tracking-wide">Despliegue Técnico (Protocolo Aquiles v3.4):</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🛡️</span> <span><strong>Túnel Proxy Seguro:</strong> API Keys de Gemini protegidas tras <em>Edge Functions</em> en Supabase.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🔌</span> <span><strong>Offline-First:</strong> Resiliencia local mediante IndexedDB (Dexie) para contextos sin red.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🔐</span> <span><strong>Gobernanza RBAC:</strong> Políticas RLS (Row Level Security) que impiden el borrado no autorizado.</span></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Caso 2 -->
-            <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-wider">Agroindustria</p>
-                    <span class="bg-nexo-yellow/10 text-nexo-yellow text-xs px-2 py-1 rounded">Computer Vision</span>
+            <!-- Caso 2: GPS-PBS Monitoring System -->
+            <div class="card-glass p-8 md:p-10 rounded-2xl flex flex-col h-full relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-br from-nexo-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="flex items-center justify-between mb-6 relative z-10">
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-widest">Logística Corporativa</p>
+                    <span class="bg-emerald-900/40 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Next.js / Android Native</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">Detección Temprana de Plagas (Roya)</h3>
-                <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
-                    <strong>Problema:</strong> Detección tardía visual causando pérdida de cosecha.
-                    <br><strong>Solución:</strong> App web con Visión por Computadora para análisis de hojas en campo.
+                
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-white leading-tight relative z-10">GPS-PBS Tracker Híbrido</h3>
+                
+                <p class="text-gray-400 mb-6 text-sm md:text-base leading-relaxed flex-grow relative z-10">
+                    <strong>Problema Central:</strong> Pérdida del trazado de flotas por restricciones de "Deep Sleep" de Android, telemetría falsa y reportes kilométricos imprecisos.<br><br>
+                    <strong>Solución Arquitectónica:</strong> Plataforma consolidada (Web Admin + APK Conductor). La App Android opera como entidad "inmortal" rompiendo el ahorro de energía mediante <em>Foreground Services</em> y persistencia SQLite nativa. Incluye motor de IA meteorológico automatizado usando OpenWeatherMap cruzado con Gemini.
                 </p>
-                <div class="bg-black/40 p-5 rounded-xl border border-white/5">
-                    <p class="font-bold text-white mb-2 text-sm">Resultados:</p>
-                    <ul class="space-y-1 text-sm text-gray-300">
-                        <li>• Detección <strong>2 semanas antes</strong>.</li>
-                        <li>• <strong>-30%</strong> pérdida cosecha.</li>
-                        <li>• <strong>20%</strong> optimización fungicidas.</li>
+                
+                <div class="bg-black/40 p-5 md:p-6 rounded-xl border border-white/5 relative z-10">
+                    <p class="font-extrabold text-white mb-3 text-sm tracking-wide">Despliegue Técnico (Life360 Level):</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">📍</span> <span><strong>Filtro Kalman Dual:</strong> Rechazo de outliers (falsos saltos GPS) apoyado en giroscopio.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🗜️</span> <span><strong>Robot Compresor Polyline:</strong> Reduce el peso de la base de datos PostgreSQL un <strong>95%</strong> post-48 horas.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">📡</span> <span><strong>Pusher Nativo:</strong> Alertas push bidireccionales vía Firebase Cloud Messaging (FCM V1).</span></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Caso 3 -->
-            <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-wider">Turismo (Hotel)</p>
-                    <span class="bg-nexo-yellow/10 text-nexo-yellow text-xs px-2 py-1 rounded">Chatbot IA</span>
+            <!-- Caso 3: Registro Taller PBS -->
+            <div class="card-glass p-8 md:p-10 rounded-2xl flex flex-col h-full relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-br from-nexo-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="flex items-center justify-between mb-6 relative z-10">
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-widest">Operaciones Taller</p>
+                    <span class="bg-purple-900/40 text-purple-300 border border-purple-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">React / TypeScript</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">Asistente Virtual 24/7</h3>
-                <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
-                    <strong>Problema:</strong> Pérdida de reservas por consultas fuera de horario.
-                    <br><strong>Solución:</strong> Chatbot entrenado con FAQ y disponibilidad en tiempo real.
+                
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-white leading-tight relative z-10">SISTEMA CORE: TALLER PBS</h3>
+                
+                <p class="text-gray-400 mb-6 text-sm md:text-base leading-relaxed flex-grow relative z-10">
+                    <strong>Problema Central:</strong> Desconexión entre el registro de incidencias, los diagnósticos técnicos, repuestos de bodega y la generación de la cotización final.<br><br>
+                    <strong>Solución Arquitectónica:</strong> Monitoreo 360 del ciclo de vida de los equipos. Aplicación Web Progresiva (PWA) de alto rendimiento centrada en la "Visión TYM", permitiendo que técnicos, bodega y ventas interactúen sobre el mismo hilo de datos con sincronización Serverless.
                 </p>
-                <div class="bg-black/40 p-5 rounded-xl border border-white/5">
-                    <p class="font-bold text-white mb-2 text-sm">Resultados:</p>
-                    <ul class="space-y-1 text-sm text-gray-300">
-                        <li>• <strong>+35%</strong> leads capturados.</li>
-                        <li>• Ahorro <strong>20hrs</strong>/semana recepción.</li>
-                        <li>• Respuesta inmediata <strong>24/7</strong>.</li>
+                
+                <div class="bg-black/40 p-5 md:p-6 rounded-xl border border-white/5 relative z-10">
+                    <p class="font-extrabold text-white mb-3 text-sm tracking-wide">Despliegue Técnico (PWA Engine):</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">⚡</span> <span><strong>Arquitectura BaaS:</strong> Backend Serverless de alta concurrencia vía Supabase.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">📱</span> <span><strong>Ergonomía Táctil:</strong> Diseño <em>Touch-First</em> con sistema robusto de enrutamiento React Router.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🔔</span> <span><strong>State Sync:</strong> Notificaciones no bloqueantes (Sonner) guiando el flujo operativo en bodega.</span></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Caso 4 -->
-            <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
-                <div class="flex items-center justify-between mb-4">
-                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-wider">Retail Local</p>
-                    <span class="bg-nexo-yellow/10 text-nexo-yellow text-xs px-2 py-1 rounded">Marketing IA</span>
+            <!-- Caso 4: Gestión de Pedidos de Partes -->
+            <div class="card-glass p-8 md:p-10 rounded-2xl flex flex-col h-full relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-br from-nexo-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div class="flex items-center justify-between mb-6 relative z-10">
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-widest">Control Logístico B2B</p>
+                    <span class="bg-red-900/40 text-red-300 border border-red-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Node / Express API</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">Micro-segmentación Inteligente</h3>
-                <p class="text-gray-400 mb-6 text-sm leading-relaxed flex-grow">
-                    <strong>Problema:</strong> Pauta genérica con alto costo y baja conversión.
-                    <br><strong>Solución:</strong> Análisis de datos para 4 micro-segmentos y copy personalizado con GenAI.
+                
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-white leading-tight relative z-10">Gestión de Partes de Valor Crítico</h3>
+                
+                <p class="text-gray-400 mb-6 text-sm md:text-base leading-relaxed flex-grow relative z-10">
+                    <strong>Problema Central:</strong> Trazabilidad rota en las importaciones de partes, tiempos de entrega (ETA) calculados al azar y falta de registro auditable en las aprobaciones.<br><br>
+                    <strong>Solución Arquitectónica:</strong> Sistema Monolítico Modular regido por el ciclo de vida estricto del repuesto: <em>Solicitado → Aprobado → Proceso → Disponible</em>. El Dashboard inteligente orquesta automáticamente retrasos logísticos y mueve los ítems a Backlog para mantener la pantalla libre de ruido operativo.
                 </p>
-                <div class="bg-black/40 p-5 rounded-xl border border-white/5">
-                    <p class="font-bold text-white mb-2 text-sm">Resultados:</p>
-                    <ul class="space-y-1 text-sm text-gray-300">
-                        <li>• <strong>+200%</strong> ROAS.</li>
-                        <li>• <strong>+50%</strong> CTR.</li>
-                        <li>• Nicho de alto valor descubierto.</li>
+                
+                <div class="bg-black/40 p-5 md:p-6 rounded-xl border border-white/5 relative z-10">
+                    <p class="font-extrabold text-white mb-3 text-sm tracking-wide">Despliegue Técnico (Seguridad Fail-Secure):</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🧱</span> <span><strong>Tipado de Hierro:</strong> Validación <em>Zod Schema</em> bloqueando peticiones hostiles al API REST.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">⏳</span> <span><strong>Motor ETA Automático:</strong> Algoritmo de inyección de fechas (50 vs 30 días) configurado vía BD.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🔐</span> <span><strong>Auditoría Inmutable:</strong> Autenticación JWT forzada (6 hrs logout) con tracking de cambios "Quién/Cuándo".</span></li>
                     </ul>
                 </div>
             </div>
