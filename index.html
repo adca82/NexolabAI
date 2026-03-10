@@ -438,28 +438,28 @@
                 </div>
             </div>
 
-            <!-- Caso 2: GPS-PBS Monitoring System -->
+            <!-- Caso 2: Gestión de Pedidos de Partes -->
             <div class="card-glass p-8 md:p-10 rounded-2xl flex flex-col h-full relative overflow-hidden group">
                 <div class="absolute inset-0 bg-gradient-to-br from-nexo-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <div class="flex items-center justify-between mb-6 relative z-10">
-                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-widest">Logística Corporativa</p>
-                    <span class="bg-emerald-900/40 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Next.js / Android Native</span>
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-widest">Control Logístico B2B</p>
+                    <span class="bg-red-900/40 text-red-300 border border-red-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Node / Express API</span>
                 </div>
                 
-                <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-white leading-tight relative z-10">GPS-PBS Tracker Híbrido</h3>
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-white leading-tight relative z-10">Sistema de Gestión Logístico de Partes</h3>
                 
                 <p class="text-gray-400 mb-6 text-sm md:text-base leading-relaxed flex-grow relative z-10">
-                    <strong>Problema Central:</strong> Pérdida del trazado de flotas por restricciones de "Deep Sleep" de Android, telemetría falsa y reportes kilométricos imprecisos.<br><br>
-                    <strong>Solución Arquitectónica:</strong> Plataforma consolidada (Web Admin + APK Conductor). La App Android opera como entidad "inmortal" rompiendo el ahorro de energía mediante <em>Foreground Services</em> y persistencia SQLite nativa. Incluye motor de IA meteorológico automatizado usando OpenWeatherMap cruzado con Gemini.
+                    <strong>Problema Central:</strong> Trazabilidad rota en las importaciones de partes, tiempos de entrega (ETA) calculados al azar y falta de registro auditable en las aprobaciones.<br><br>
+                    <strong>Solución Arquitectónica:</strong> Sistema Monolítico Modular regido por el ciclo de vida estricto del repuesto: <em>Solicitado → Aprobado → Proceso → Disponible</em>. El Dashboard inteligente orquesta automáticamente retrasos logísticos y mueve los ítems a Backlog para mantener la pantalla libre de ruido operativo.
                 </p>
                 
                 <div class="bg-black/40 p-5 md:p-6 rounded-xl border border-white/5 relative z-10">
-                    <p class="font-extrabold text-white mb-3 text-sm tracking-wide">Despliegue Técnico (Life360 Level):</p>
+                    <p class="font-extrabold text-white mb-3 text-sm tracking-wide">Despliegue Técnico (Seguridad Fail-Secure):</p>
                     <ul class="space-y-2 text-sm text-gray-300">
-                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">📍</span> <span><strong>Filtro Kalman Dual:</strong> Rechazo de outliers (falsos saltos GPS) apoyado en giroscopio.</span></li>
-                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🗜️</span> <span><strong>Robot Compresor Polyline:</strong> Reduce el peso de la base de datos PostgreSQL un <strong>95%</strong> post-48 horas.</span></li>
-                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">📡</span> <span><strong>Pusher Nativo:</strong> Alertas push bidireccionales vía Firebase Cloud Messaging (FCM V1).</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🧱</span> <span><strong>Tipado de Hierro:</strong> Validación <em>Zod Schema</em> bloqueando peticiones hostiles al API REST.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">⏳</span> <span><strong>Motor ETA Automático:</strong> Algoritmo de inyección de fechas (50 vs 30 días) configurado vía BD.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🔐</span> <span><strong>Auditoría Inmutable:</strong> Autenticación JWT forzada (6 hrs logout) con tracking de cambios "Quién/Cuándo".</span></li>
                     </ul>
                 </div>
             </div>
@@ -490,28 +490,28 @@
                 </div>
             </div>
 
-            <!-- Caso 4: Gestión de Pedidos de Partes -->
+            <!-- Caso 4: GPS-PBS Monitoring System -->
             <div class="card-glass p-8 md:p-10 rounded-2xl flex flex-col h-full relative overflow-hidden group">
                 <div class="absolute inset-0 bg-gradient-to-br from-nexo-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <div class="flex items-center justify-between mb-6 relative z-10">
-                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-widest">Control Logístico B2B</p>
-                    <span class="bg-red-900/40 text-red-300 border border-red-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Node / Express API</span>
+                    <p class="text-xs font-bold text-nexo-yellow uppercase tracking-widest">Logística Corporativa</p>
+                    <span class="bg-emerald-900/40 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Next.js / Android Native</span>
                 </div>
                 
-                <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-white leading-tight relative z-10">Gestión de Partes de Valor Crítico</h3>
+                <h3 class="text-2xl md:text-3xl font-extrabold mb-4 text-white leading-tight relative z-10">GPS-PBS Tracker Híbrido</h3>
                 
                 <p class="text-gray-400 mb-6 text-sm md:text-base leading-relaxed flex-grow relative z-10">
-                    <strong>Problema Central:</strong> Trazabilidad rota en las importaciones de partes, tiempos de entrega (ETA) calculados al azar y falta de registro auditable en las aprobaciones.<br><br>
-                    <strong>Solución Arquitectónica:</strong> Sistema Monolítico Modular regido por el ciclo de vida estricto del repuesto: <em>Solicitado → Aprobado → Proceso → Disponible</em>. El Dashboard inteligente orquesta automáticamente retrasos logísticos y mueve los ítems a Backlog para mantener la pantalla libre de ruido operativo.
+                    <strong>Problema Central:</strong> Pérdida del trazado de flotas por restricciones de "Deep Sleep" de Android, telemetría falsa y reportes kilométricos imprecisos.<br><br>
+                    <strong>Solución Arquitectónica:</strong> Plataforma consolidada (Web Admin + APK Conductor). La App Android opera como entidad "inmortal" rompiendo el ahorro de energía mediante <em>Foreground Services</em> y persistencia SQLite nativa. Incluye motor de IA meteorológico automatizado usando OpenWeatherMap cruzado con Gemini.
                 </p>
                 
                 <div class="bg-black/40 p-5 md:p-6 rounded-xl border border-white/5 relative z-10">
-                    <p class="font-extrabold text-white mb-3 text-sm tracking-wide">Despliegue Técnico (Seguridad Fail-Secure):</p>
+                    <p class="font-extrabold text-white mb-3 text-sm tracking-wide">Despliegue Técnico (Life360 Level):</p>
                     <ul class="space-y-2 text-sm text-gray-300">
-                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🧱</span> <span><strong>Tipado de Hierro:</strong> Validación <em>Zod Schema</em> bloqueando peticiones hostiles al API REST.</span></li>
-                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">⏳</span> <span><strong>Motor ETA Automático:</strong> Algoritmo de inyección de fechas (50 vs 30 días) configurado vía BD.</span></li>
-                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🔐</span> <span><strong>Auditoría Inmutable:</strong> Autenticación JWT forzada (6 hrs logout) con tracking de cambios "Quién/Cuándo".</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">📍</span> <span><strong>Filtro Kalman Dual:</strong> Rechazo de outliers (falsos saltos GPS) apoyado en giroscopio.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">🗜️</span> <span><strong>Robot Compresor Polyline:</strong> Reduce el peso de la base de datos PostgreSQL un <strong>95%</strong> post-48 horas.</span></li>
+                        <li class="flex items-start"><span class="text-nexo-yellow mr-2">📡</span> <span><strong>Pusher Nativo:</strong> Alertas push bidireccionales vía Firebase Cloud Messaging (FCM V1).</span></li>
                     </ul>
                 </div>
             </div>
